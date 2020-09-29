@@ -2,6 +2,7 @@ package com.buuz135.industrial.module;
 
 import com.buuz135.industrial.api.plant.PlantRecollectable;
 import com.buuz135.industrial.block.agriculturehusbandry.*;
+import com.buuz135.industrial.block.mobfarming.SlaughterFactoryBlock;
 import com.buuz135.industrial.registry.IFRegistries;
 import com.buuz135.industrial.utils.Reference;
 import com.buuz135.industrial.utils.apihandlers.plant.*;
@@ -24,11 +25,10 @@ public class ModuleAgricultureHusbandry implements IModule {
     public static SewageComposterBlock SEWAGE_COMPOSTER = new SewageComposterBlock();
     public static PlantFertilizerBlock PLANT_FERTILIZER = new PlantFertilizerBlock();
     public static PlantSowerBlock PLANT_SOWER = new PlantSowerBlock();
-    public static SlaughterFactoryBlock SLAUGHTER_FACTORY = new SlaughterFactoryBlock();
     public static AnimalRancherBlock ANIMAL_RANCHER = new AnimalRancherBlock();
     public static AnimalFeederBlock ANIMAL_FEEDER = new AnimalFeederBlock();
     public static AnimalBabySeparatorBlock ANIMAL_BABY_SEPARATOR = new AnimalBabySeparatorBlock();
-    public static MobCrusherBlock MOB_CRUSHER = new MobCrusherBlock();
+
 
     @Override
     public List<Feature.Builder> generateFeatures() {
@@ -51,11 +51,10 @@ public class ModuleAgricultureHusbandry implements IModule {
                 content(Block.class, SEWER).
                 content(Block.class, SEWAGE_COMPOSTER));
         builders.add(createFeature(PLANT_FERTILIZER));
-        builders.add(createFeature(SLAUGHTER_FACTORY));
         builders.add(createFeature(ANIMAL_RANCHER));
         builders.add(createFeature(ANIMAL_FEEDER));
         builders.add(createFeature(ANIMAL_BABY_SEPARATOR));
-        builders.add(createFeature(MOB_CRUSHER));
+
         TAB_AG_HUS.addIconStack(new ItemStack(PLANT_SOWER));
         return builders;
     }

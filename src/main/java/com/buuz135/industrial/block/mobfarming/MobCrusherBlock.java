@@ -1,8 +1,8 @@
-package com.buuz135.industrial.block.agriculturehusbandry;
+package com.buuz135.industrial.block.mobfarming;
 
 import com.buuz135.industrial.block.IndustrialBlock;
-import com.buuz135.industrial.block.agriculturehusbandry.tile.MobCrusherTile;
-import com.buuz135.industrial.module.ModuleAgricultureHusbandry;
+import com.buuz135.industrial.block.mobfarming.tile.MobCrusherTile;
+import com.buuz135.industrial.module.ModuleMobFarming;
 import com.buuz135.industrial.utils.IndustrialTags;
 import com.hrznstudio.titanium.api.IFactory;
 import com.hrznstudio.titanium.recipe.generator.TitaniumShapedRecipeBuilder;
@@ -16,7 +16,7 @@ import java.util.function.Consumer;
 public class MobCrusherBlock extends IndustrialBlock<MobCrusherTile> {
 
     public MobCrusherBlock() {
-        super("mob_crusher", Properties.from(Blocks.IRON_BLOCK), MobCrusherTile.class, ModuleAgricultureHusbandry.TAB_AG_HUS);
+        super("mob_crusher", Properties.from(Blocks.IRON_BLOCK), MobCrusherTile.class, ModuleMobFarming.TAB_MOB_FARMING);
     }
 
     @Override

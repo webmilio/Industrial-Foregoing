@@ -1,4 +1,4 @@
-package com.buuz135.industrial.config.machine.agriculturehusbandry;
+package com.buuz135.industrial.config.machine.mobfarming;
 
 import com.buuz135.industrial.config.MachineAgricultureHusbandryConfig;
 import com.hrznstudio.titanium.annotation.config.ConfigFile;

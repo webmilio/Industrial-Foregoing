@@ -177,6 +177,10 @@ public class IndustrialForegoing extends ModuleController {
         new ModuleAgricultureHusbandry().generateFeatures().forEach(agriculture::feature);
         addModule(agriculture);
 
+        Module.Builder mobFarming = Module.builder("mob_farming").description("All machines that farm mobs");
+        new ModuleMobFarming().generateFeatures().forEach(mobFarming::feature);
+        addModule(mobFarming);
+
         Module.Builder resources = Module.builder("resource_production");
         new ModuleResourceProduction().generateFeatures().forEach(resources::feature);
         addModule(resources);
@@ -184,7 +188,6 @@ public class IndustrialForegoing extends ModuleController {
         Module.Builder misc = Module.builder("misc").description("Random things that don't fit");
         new ModuleMisc().generateFeatures().forEach(misc::feature);
         addModule(misc);
-
     }
 
     @OnlyIn(Dist.CLIENT)

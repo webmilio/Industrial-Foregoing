@@ -1,10 +1,11 @@
-package com.buuz135.industrial.block.agriculturehusbandry.tile;
+package com.buuz135.industrial.block.mobfarming.tile;
 
 import com.buuz135.industrial.block.tile.IndustrialAreaWorkingTile;
 import com.buuz135.industrial.block.tile.RangeManager;
-import com.buuz135.industrial.config.machine.agriculturehusbandry.SlaughterFactoryConfig;
+import com.buuz135.industrial.config.machine.mobfarming.SlaughterFactoryConfig;
 import com.buuz135.industrial.module.ModuleAgricultureHusbandry;
 import com.buuz135.industrial.module.ModuleCore;
+import com.buuz135.industrial.module.ModuleMobFarming;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;
 import com.hrznstudio.titanium.component.fluid.FluidTankComponent;
@@ -29,7 +30,7 @@ public class SlaughterFactoryTile extends IndustrialAreaWorkingTile<SlaughterFac
     private SidedFluidTankComponent<SlaughterFactoryTile> pinkSlime;
 
     public SlaughterFactoryTile() {
-        super(ModuleAgricultureHusbandry.SLAUGHTER_FACTORY, RangeManager.RangeType.BEHIND, true);
+        super(ModuleMobFarming.SLAUGHTER_FACTORY, RangeManager.RangeType.BEHIND, true);
         addTank(meat = (SidedFluidTankComponent<SlaughterFactoryTile>) new SidedFluidTankComponent<SlaughterFactoryTile>("meat", SlaughterFactoryConfig.maxMeatTankSize, 43, 20, 0).
                 setColor(DyeColor.BROWN).
                 setTankAction(FluidTankComponent.Action.DRAIN).
